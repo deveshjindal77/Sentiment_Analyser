@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" style="background-size: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/c5ad6c7381.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+            margin-top: 4em;
+        }
+        .btn:hover{
+            box-shadow: 1px 1px 10px 2px rgba(5, 83, 102, 0.8);
+        }
+        .header{
+            position:fixed; 
+            top:1% ;margin: 0em 1em 0em 1em; 
+            padding:0em; 
+            background-color: rgba(194, 207, 226, 0.5);
+            width:95%; 
+            border-radius: 2em; 
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-between;
+        }
+        i{
+            font-size: 2.6em;
+            color: rgb(9, 73, 175);
+        }
+        button{
+            transition: all ease-in 300ms;
+        }
+        span{
+           font-family: "Bonheur Royale",cursive; font-size: 1.5em;
+           transition: all ease-in 1000ms;
+        }
+        .ifri{
+            background: url('/static/image-from-rawpixel-id-2808617-original.png') no-repeat;
+            background-position: right;
+            background-size: contain;
+            transition: all ease-in-out 800ms;
+        }
+        .ifor{
+            background: url('/static/image-from-rawpixel-id-3885416-original.png') no-repeat;
+            background-position: right;
+            background-size: contain;
+            transition: all ease-in-out 800ms;
+        }
+        .label{
+            width: fit-content; 
+            font-size: 1.6em; 
+            font-weight: 700; 
+            color:midnightblue;
+        }
+        .btncon{
+            margin: auto; 
+            width: max-content; 
+            background-color: ghostwhite; 
+            border-radius: 2em; 
+            display: flex; 
+            flex-direction: row; 
+            padding: 0em;
+        }
+        .fri{
+            background-color: ghostwhite; 
+            width:3.5em; 
+            border: 0px;
+            border-radius: 50% 0% 0% 50%; 
+            padding:0em 0em 0em 0.5em; 
+            height: 3em; 
+            margin: 0em;
+        }
+        .for{
+            background-color: ghostwhite; 
+            width:3.5em; 
+            border: 0px;
+            border-radius: 0% 50% 50% 0%; 
+            padding:0em 0.5em 0em 0em; 
+            height: 3em; 
+            margin: 0em;
+        }
+        .mleft{
+            flex-basis: 42%; 
+            height:fit-content; 
+            padding: 1em; 
+            border-radius: 2em; 
+            background-color: rgba(255, 255, 255, 0.315);
+        }
+        .welcome{
+            font-size: 1.8em; 
+            color: rgb(255, 255, 255); 
+            background-color: #FF004F; 
+            margin: 0.4em auto; 
+            width: fit-content; 
+            padding: 0em 1em 0.2em 1em; 
+            border-radius: 2em;
+        }
+        .greet{
+            font-size: 1.5em; 
+            margin:auto; 
+            width: fit-content; 
+            padding: 0.2em; 
+            color: darkgreen;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        .tell{
+            font-size: 1.3em; 
+            margin: 2em 0em 0.5em 0em;
+        }
+        textarea{
+            width:90%; 
+            height: 8em; 
+            border-radius: 0.5em; 
+            border: 0px; 
+            font-size: 1.4em; 
+            padding: 0.3em; 
+            margin: 1em auto; 
+            background-color: ghostwhite; 
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .btn{
+            font-size: 1.5em; 
+            padding: 0.3em 1.5em; 
+            border: 0em; 
+            border-radius: 2em; 
+            background-color: #419add; 
+            margin: 0.5em auto; 
+            width:fit-content; 
+            color: white; 
+            display: block; 
+            transition: all 500ms;
+        }
+        .resp{
+            background-color: rgba(6, 54, 73, 0.651); 
+            margin: 0.5em; 
+            padding: 1.5em; 
+            border-radius: 2em; 
+            color: white;
+        }
+        .polcon{
+            border-radius: 2em; 
+            width:21em; 
+            background-color: rgb(244, 248, 248); 
+            height: 1.8em; 
+            margin: 0.2em 0em 0.2em 0.7em;
+        }
+        .polind{
+            display: inline; 
+            font-size: 1.4em; 
+            color: rgb(232, 241, 241); 
+            padding: 0.25em 0.5em;
+        }
+        .polar{
+            width:10em; 
+            background-color:rgb(228, 133, 78); 
+            border-radius:1.5em; 
+            height:1.8em
+        }
+        .object{
+            width:10em; 
+            background-color:cornflowerblue; 
+            border-radius:1.5em; 
+            height:1.8em
+        }
+        .response{
+            background-color: rgba(237, 237, 245, 0.863); 
+            padding: 0.3em 1em 0.4em 1em; 
+            border-radius: 1em; 
+            color: navy;
+        }
+        .detail{
+            background-color: rgba(237, 237, 245, 0.863); 
+            padding: 0.3em 1em 0.4em 1em; 
+            border-radius: 1em; 
+            color: navy;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Roboto&display=swap" rel="stylesheet">
+    <title>Giffy</title>
+</head>
+<body>
+    <div class="header">
+        <div style="width: fit-content; margin: auto; display: flex; flex-direction: row;">
+            <div class="label" style="margin: 0.3em 0.3em 0em 0em;">Friend</div>
+            <div class="btncon">
+            <button class="fri"><i id="f1" class="fas fa-circle"></i></button>
+            <button class="for"><i id="f2" class="fas"></i></button>
+            </div>
+            <div class="label" style="margin: 0.3em 0em 0em 0.3em;">Professional</div>
+        </div>
+    </div>
+    <div style="display: flex; margin: 2em">
+        <div class="mleft">
+            <div class="welcome"> Hey, Your A.I. Friend <span>Smarty </span> Here! </div>
+            <div class="greet">Glad to see You!</div>
+            <div style="width: fit-content; margin: auto;">
+                <div class="tell">Let's Chat, tell me what's on your mind...</div>
+                <form action="\" method="POST">
+                    <textarea placeholder="Type something here" name="sentence"></textarea>
+                    <input type="text" style="display: none;" value="friend" class="choice" name="ch">
+                    <button class="btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="image ifri" style="flex-grow:1;">
+        {% if bool2 == 1 %}
+            <div class="resp">
+                <div>
+                    <span style="letter-spacing: 0.15em; margin: 0.2em 0.5em;">😢😓🙁😒😐🙂😀😊🤩</span><br>
+                    <div style="display: flex; flex-direction: row;">
+                        <div class="polcon">
+                            <div class="polar"></div>
+                        </div>
+                        <div class="polind">Polarity: {{pol}}</div>
+                    </div>
+                    
+                </div>
+                <div>
+                    <span style="letter-spacing: 0.15em; margin: 0.2em 0.5em;">Objective &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Subjective</span>
+                    <div style="display: flex; flex-direction: row;">
+                        <div class = "polcon">
+                            <div class="object"></div>
+                        </div>
+                        <div class="polind">Subjectivity: {{obj}}</div>
+                    </div>
+                </div>
+                {% if bool1 == 1 %}
+                <div style="font-size: 1.25em; margin: 0.5em;">
+                    Response:  
+                    <div class="response">{{res}}</div>
+                </div>
+                <script>
+                    document.querySelector(".image").classList.add("ifri")
+                    document.querySelector(".image").classList.remove("ifor")
+                    document.querySelector("#f1").classList.add("fa-circle")
+                    document.querySelector("#f2").classList.remove("fa-circle")
+                    document.querySelector(".choice").value = "friend"
+                </script>
+                {% endif %}
+                {% if bool1 == 0 %}
+                <div style="font-size: 1.2em; margin: 0.5em;">
+                    <div class="detail">Polarity value lies between &nbsp; &nbsp; [-1:'Negative' to 1:'Positive']</div>
+                    <div class = "detail" style="margin-top: 1em;">Subjectivity value lies between &nbsp; &nbsp; [0:'Objective' to 1:'Subjective']</div>
+                </div>
+                <script>
+                    document.querySelector(".image").classList.add("ifor")
+                    document.querySelector(".image").classList.remove("ifri")
+                    document.querySelector("#f2").classList.add("fa-circle")
+                    document.querySelector("#f1").classList.remove("fa-circle")
+                    document.querySelector(".choice").value = "prof"
+                </script>
+                {% endif %}
+            </div>
+        {% endif %}
+        </div>
+    </div>
+    
+    <script>
+        var b_fr = document.querySelector(".fri");
+        var b_f = document.querySelector(".for");
+        var p = '{{polc}}';
+        var s1 =(21*p/2).toString().concat("em");
+        var s2 = (21*'{{obj}}').toString().concat("em");
+        console.log(s1)
+        document.querySelector(".object").style.width = s2;
+        document.querySelector(".polar").style.width = s1;
+        b_fr.addEventListener("click", function(){
+            document.querySelector("#f2").classList.add("fa-circle")
+            document.querySelector("#f1").classList.remove("fa-circle")
+            document.querySelector(".welcome").innerHTML = "The A.I. Sentiment Analyzer"
+            document.querySelector(".greet").innerText = "Analyze Reviews and much more..."
+            document.querySelector(".tell").innerText = "To get Polarity and Subjectivity type Text below:"
+            document.querySelector(".image").classList.add("ifor")
+            document.querySelector(".image").classList.remove("ifri")
+            document.querySelector(".choice").value = "prof"
+        })
+        b_f.addEventListener("click", function(){
+            document.querySelector("#f1").classList.add("fa-circle")
+            document.querySelector("#f2").classList.remove("fa-circle") 
+            document.querySelector(".welcome").innerHTML = 'Hey, Your A.I. Friend <span>Smarty </span> Here!'
+            document.querySelector(".greet").innerText = "Glad to See You!"
+            document.querySelector(".tell").innerText = "Let's Chat, tell me what's on your mind..."
+            document.querySelector(".image").classList.add("ifri")
+            document.querySelector(".image").classList.remove("ifor")
+            document.querySelector(".choice").value = "friend"
+        })
+    </script>
+</body>
+</html>
